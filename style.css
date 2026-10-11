@@ -213,3 +213,16 @@ h3 { margin: 0; color: var(--white); font-size: 1.1rem; font-weight: 600; line-h
   .js .chips li.rv.in:hover { transform: translateY(-2px); }
 }
 @media (prefers-reduced-motion: reduce) { .progress { display: none; } }
+
+/* Fit previews to the width: no sideways scrolling */
+.hero-strip { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: start; gap: clamp(8px, 2vw, 20px); overflow: visible; padding: 24px clamp(14px, 3vw, 32px); }
+.hero-strip .phone { width: auto; border-radius: clamp(12px, 2vw, 22px); }
+.shots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(8px, 1.6vw, 16px); overflow: visible; padding: 4px 0 0; max-width: 640px; }
+.shots .phone { width: auto; border-radius: clamp(10px, 1.6vw, 18px); }
+.shots.n3 { grid-template-columns: repeat(3, minmax(0, 1fr)); max-width: 480px; }
+@media (max-width: 640px) {
+  .hero-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .hero-strip .phone:nth-child(n+4) { display: none; }
+  .shots { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 320px; }
+  .shots.n3 { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 320px; }
+}
