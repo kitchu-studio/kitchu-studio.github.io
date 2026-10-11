@@ -186,3 +186,7 @@ h3 { margin: 0; font-size: 1.3rem; font-weight: 600; line-height: 1.4; }
 }
 .chips img { flex: none; }
 .skills dl > div { align-content: start; }
+
+.more { margin: 32px 0 0; padding: 18px 22px; background: var(--blue-wash); border-radius: 14px; max-width: 46em; color: var(--text); }
+.more strong { font-weight: 600; }
+.more a { display: inline-block; margin-left: 6px; color: var(--blue); font-weight: 600; text-underline-offset: 4px; }
