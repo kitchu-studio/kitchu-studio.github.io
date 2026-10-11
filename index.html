@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="th" data-lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kitchu studio</title>
+  <meta name="description" content="Mobile apps and Go backends for small shops. Booking, ordering and loyalty demos by Kittikun Chunhachotwanit, Bangkok.">
+  <meta property="og:title" content="kitchu studio">
+  <meta property="og:description" content="แอปมือถือพร้อมระบบหลังบ้านสำหรับร้านขนาดเล็ก · Mobile apps with a backend for small shops">
+  <meta name="theme-color" content="#1d4ed8">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#top" aria-label="kitchu studio">kitchu studio</a>
+    <nav class="top-nav" aria-label="Main">
+      <a href="#work"><span lang="th">ผลงาน</span><span lang="en">Work</span></a>
+      <a href="#process"><span lang="th">วิธีทำงาน</span><span lang="en">Process</span></a>
+      <a href="#contact"><span lang="th">ติดต่อ</span><span lang="en">Contact</span></a>
+      <button type="button" class="lang" id="lang" aria-label="Switch language / เปลี่ยนภาษา">
+        <span lang="th">EN</span><span lang="en">ไทย</span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <h1>
+            <span lang="th">แอปมือถือ พร้อม<span class="nb">ระบบหลังบ้าน</span> <span class="nb">สำหรับร้านขนาดเล็ก</span></span>
+            <span lang="en">Mobile apps with a backend, built for small shops</span>
+          </h1>
+          <p class="lead">
+            <span lang="th">จองคิว สั่งอาหาร สะสมแต้ม ผมทำให้ครบทั้งตัวแอปและเซิร์ฟเวอร์ ตัวอย่างงานที่ใช้งานได้จริงอยู่ด้านล่าง</span>
+            <span lang="en">Booking, ordering, loyalty. I build both the app and the server. Working demos are just below.</span>
+          </p>
+          <div class="actions">
+            <a class="btn btn-light" href="#work"><span lang="th">ดูผลงาน</span><span lang="en">See the work</span></a>
+            <a class="btn btn-ghost" href="#contact"><span lang="th">ติดต่อ</span><span lang="en">Get in touch</span></a>
+          </div>
+        </div>
+        <div class="hero-phones" aria-hidden="true">
+          <figure class="phone p1"><img src="assets/shots/booking-03-booking.webp" width="540" height="1350" alt=""></figure>
+          <figure class="phone p2"><img src="assets/shots/order-03-receipt.webp" width="540" height="1350" alt=""></figure>
+          <figure class="phone p3"><img src="assets/shots/loyalty-04-assistant.webp" width="540" height="1212" alt=""></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="section">
+      <div class="wrap">
+        <h2><span lang="th">ตัวอย่างงาน</span><span lang="en">Demo projects</span></h2>
+        <p class="section-note">
+          <span lang="th">สร้างขึ้นเองเพื่อแสดงฝีมือ ไม่ใช่งานของลูกค้ารายใด แต่ละอันมีแอปและ backend ของตัวเอง ดูโค้ดได้ที่ GitHub</span>
+          <span lang="en">Built to show what I can do, not for a specific client. Each one has its own app and backend, and the code is on GitHub.</span>
+        </p>
+
+        <article class="project">
+          <div class="project-text">
+            <h3><span lang="th">จองคิวร้านตัดผม</span><span lang="en">Salon booking</span></h3>
+            <p>
+              <span lang="th">ลูกค้าเลือกบริการจากป้ายราคา เลือกวันและเวลาที่ว่าง และดูหรือยกเลิกนัดของตัวเองได้</span>
+              <span lang="en">Customers pick a service from the price list, choose a free time slot, and see or cancel their own appointments.</span>
+            </p>
+            <p class="stack">Flutter · Go · PostgreSQL</p>
+            <p class="links">
+              <a href="https://github.com/kitchu-studio/booking-demo-app"><span lang="th">โค้ดแอป</span><span lang="en">App code</span></a>
+              <a href="https://github.com/kitchu-studio/booking-demo-backend"><span lang="th">โค้ด backend</span><span lang="en">Backend code</span></a>
+            </p>
+          </div>
+          <div class="shots" tabindex="0" role="group" aria-label="Booking screenshots">
+            <figure class="phone"><img loading="lazy" src="assets/shots/booking-01-login.webp" width="540" height="1350" alt="Login screen"></figure>
+            <figure class="phone"><img loading="lazy" src="assets/shots/booking-02-services.webp" width="540" height="1350" alt="Price list with services and prices"></figure>
+            <figure class="phone"><img loading="lazy" src="assets/shots/booking-03-booking.webp" width="540" height="1350" alt="Day and time slot picker"></figure>
+            <figure class="phone"><img loading="lazy" src="assets/shots/booking-04-my-bookings.webp" width="540" height="1350" alt="List of upcoming appointments"></figure>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-text">
+            <h3><span lang="th">สั่งอาหารร้านกาแฟ จ่ายด้วย PromptPay</span><span lang="en">Café ordering with PromptPay</span></h3>
+            <p>
+              <span lang="th">ลูกค้าเลือกเมนู สั่ง แล้วสแกน QR จ่ายเงิน ร้านเห็นคิวออเดอร์ กดรับเงิน และอัปโหลดรูปเมนูได้เอง</span>
+              <span lang="en">Customers pick from the menu, order, and scan a QR code to pay. The shop sees the order queue, confirms payment and uploads its own menu photos.</span>
+            </p>
+            <p class="stack">Flutter · Go · PostgreSQL · PromptPay QR</p>
+            <p class="links">
+              <a href="https://github.com/kitchu-studio/order-demo-app"><span lang="th">โค้ดแอป</span><span lang="en">App code</span></a>
+              <a href="https://github.com/kitchu-studio/order-demo-backend"><span lang="th">โค้ด backend</span><span lang="en">Backend code</span></a>
+            </p>
+          </div>
+          <div class="shots" tabindex="0" role="group" aria-label="Ordering screenshots">
+            <figure class="phone"><img loading="lazy" src="assets/shots/order-01-menu.webp" width="540" height="1350" alt="Menu with prices and a cart bar"></figure>
+            <figure class="phone"><img loading="lazy" src="assets/shots/order-02-cart.webp" width="540" height="1350" alt="Cart with quantities and total"></figure>
+            <figure class="phone"><img loading="lazy" src="assets/shots/order-03-receipt.webp" width="540" height="1350" alt="Order receipt with PromptPay QR code"></figure>
+            <figure class="phone"><img loading="lazy" src="assets/shots/order-04-shop.webp" width="540" height="1350" alt="Shop view with the order queue"></figure>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-text">
+            <h3><span lang="th">สะสมแต้มพร้อมผู้ช่วย AI</span><span lang="en">Loyalty points with an AI assistant</span></h3>
+            <p>
+              <span lang="th">ลูกค้ากรอกโค้ดจากแคชเชียร์เพื่อรับแต้ม แลกของรางวัลเป็นคูปอง และถามผู้ช่วย AI เรื่องร้านได้ ร้านเป็นคนกำหนดเองว่า AI รู้อะไรบ้าง</span>
+              <span lang="en">Customers enter a code from the cashier to earn points, redeem rewards as vouchers, and ask an AI assistant about the shop. The shop decides what the assistant knows.</span>
+            </p>
+            <p class="stack">React Native (Expo) · TypeScript · Go · PostgreSQL · Claude API</p>
+            <p class="links">
+              <a href="https://github.com/kitchu-studio/loyalty-demo-app"><span lang="th">โค้ดแอป</span><span lang="en">App code</span></a>
+              <a href="https://github.com/kitchu-studio/loyalty-demo-backend"><span lang="th">โค้ด backend</span><span lang="en">Backend code</span></a>
+            </p>
+          </div>
+          <div class="shots" tabindex="0" role="group" aria-label="Loyalty screenshots">
+            <figure class="phone"><img loading="lazy" src="assets/shots/loyalty-01-login.webp" width="540" height="1212" alt="Login screen"></figure>
+            <figure class="phone"><img loading="lazy" src="assets/shots/loyalty-04-assistant.webp" width="540" height="1212" alt="Chat with the shop assistant"></figure>
+            <figure class="phone"><img loading="lazy" src="assets/shots/loyalty-05-staff.webp" width="540" height="1212" alt="Staff screen for issuing point codes and checking vouchers"></figure>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="process" class="section tint">
+      <div class="wrap process">
+        <div>
+          <h2><span lang="th">วิธีทำงาน</span><span lang="en">How I work</span></h2>
+          <p class="section-note">
+            <span lang="th">ทำคนเดียว คุยกับผมตรง ๆ ไม่ผ่านหลายต่อ</span>
+            <span lang="en">One developer, so you talk to the person writing the code.</span>
+          </p>
+        </div>
+        <ol class="steps">
+          <li>
+            <h3><span lang="th">คุยโจทย์</span><span lang="en">Talk it through</span></h3>
+            <p><span lang="th">เล่าว่าร้านทำงานอย่างไร และอยากให้แอปช่วยตรงไหน</span><span lang="en">Tell me how the shop runs and where an app would help.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">ตกลงขอบเขต</span><span lang="en">Agree the scope</span></h3>
+            <p><span lang="th">สรุปหน้าจอและฟีเจอร์ที่จะทำ ก่อนเริ่มเขียนโค้ด</span><span lang="en">Write down the screens and features before any code.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">พัฒนาและส่งให้ลอง</span><span lang="en">Build and try</span></h3>
+            <p><span lang="th">ส่งงานเป็นช่วง ๆ ให้ลองใช้จริง และแก้ระหว่างทาง</span><span lang="en">Ship in small pieces you can use, and adjust as we go.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">ส่งมอบ</span><span lang="en">Hand over</span></h3>
+            <p><span lang="th">ส่งโค้ด คู่มือติดตั้ง และขึ้นระบบให้ใช้งานได้</span><span lang="en">Deliver the code, setup notes, and a running system.</span></p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap skills">
+        <h2><span lang="th">สิ่งที่ทำได้</span><span lang="en">What I work with</span></h2>
+        <dl>
+          <div><dt><span lang="th">แอปมือถือ</span><span lang="en">Mobile apps</span></dt><dd>Flutter, React Native, Kotlin, Swift</dd></div>
+          <div><dt><span lang="th">ระบบหลังบ้าน</span><span lang="en">Backend</span></dt><dd>Go, REST API, JWT login with refresh tokens</dd></div>
+          <div><dt><span lang="th">ฐานข้อมูล</span><span lang="en">Data</span></dt><dd>PostgreSQL, Redis</dd></div>
+          <div><dt><span lang="th">ขึ้นระบบ</span><span lang="en">Running it</span></dt><dd>Docker, GitHub Actions, AWS</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="wrap">
+        <h2><span lang="th">มีงานอยากให้ช่วยทำ?</span><span lang="en">Have something to build?</span></h2>
+        <p class="section-note">
+          <span lang="th">เล่าสั้น ๆ ว่าร้านทำอะไร และอยากได้อะไร ผมตอบกลับเอง</span>
+          <span lang="en">Tell me briefly what the shop does and what you need. I reply myself.</span>
+        </p>
+        <div class="contact-links" id="contact-links">
+          <a class="btn btn-solid" href="mailto:devkit002@gmail.com">devkit002@gmail.com</a>
+          <a class="btn btn-line" href="https://www.linkedin.com/in/kittikun-chunhachotwanit-125684236">LinkedIn</a>
+          <a class="btn btn-line" href="https://github.com/kitchu-studio">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>© 2026 kitchu studio</span>
+      <span><span lang="th">โดย</span><span lang="en">by</span> Kittikun Chunhachotwanit · Bangkok</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
