@@ -174,3 +174,15 @@ h3 { margin: 0; font-size: 1.3rem; font-weight: 600; line-height: 1.4; }
 @media (min-width: 760px) {
   .ai-list { grid-template-columns: repeat(2, 1fr); column-gap: 56px; }
 }
+
+/* Skills with icons */
+.skills dd.what { color: var(--subtle); margin-top: 2px; }
+.skills dd:last-child { margin-top: 10px; }
+.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 12px 5px 10px; border: 1px solid var(--line); border-radius: 999px;
+  font-size: 0.95rem; font-weight: 500; color: var(--text); background: #fff;
+}
+.chips img { flex: none; }
+.skills dl > div { align-content: start; }

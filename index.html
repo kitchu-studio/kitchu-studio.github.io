@@ -19,6 +19,7 @@
     <a class="brand" href="#top" aria-label="kitchu studio">kitchu studio</a>
     <nav class="top-nav" aria-label="Main">
       <a href="#work"><span lang="th">ผลงาน</span><span lang="en">Work</span></a>
+      <a href="#ai">AI</a>
       <a href="#process"><span lang="th">วิธีทำงาน</span><span lang="en">Process</span></a>
       <a href="#contact"><span lang="th">ติดต่อ</span><span lang="en">Contact</span></a>
       <button type="button" class="lang" id="lang" aria-label="Switch language / เปลี่ยนภาษา">
@@ -124,7 +125,50 @@
       </div>
     </section>
 
-    <section id="process" class="section tint">
+    <section id="ai" class="section tint">
+      <div class="wrap">
+        <h2><span lang="th">AI ช่วยงานร้านได้อะไรบ้าง</span><span lang="en">What AI can do for a small shop</span></h2>
+        <p class="section-note">
+          <span lang="th">ผมใส่ AI เข้าไปในแอปและระบบหลังบ้านเฉพาะจุดที่ช่วยได้จริง นี่คือสิ่งที่ทำได้ในวันนี้</span>
+          <span lang="en">I add AI to the app and backend only where it earns its place. These are things that work today.</span>
+        </p>
+        <ul class="ai-list">
+          <li>
+            <h3><span lang="th">ตอบลูกค้าตลอดเวลา</span><span lang="en">Answer customers any time</span></h3>
+            <p><span lang="th">ตอบคำถามซ้ำ ๆ เรื่องเวลาเปิด เมนู โปรโมชัน จากข้อมูลที่ร้านตั้งไว้ มีเดโมในตัวอย่างงานด้านบน</span><span lang="en">Handle the repeat questions about opening hours, menu and promotions, from information the shop sets. There is a demo above.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">ร่างข้อความให้พนักงาน</span><span lang="en">Draft replies for staff</span></h3>
+            <p><span lang="th">ร่างคำตอบแชตหรือรีวิวของลูกค้า พนักงานตรวจแล้วค่อยกดส่ง</span><span lang="en">Draft replies to chats and reviews. A person checks and sends.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">อ่านเอกสารจากรูปถ่าย</span><span lang="en">Read documents from photos</span></h3>
+            <p><span lang="th">อ่านใบเสร็จ สลิป หรือใบสั่งของจากรูป แล้วกรอกลงระบบให้</span><span lang="en">Read receipts, slips or supplier orders from a photo and fill them into the system.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">สรุปข้อมูลให้อ่านง่าย</span><span lang="en">Summarise what happened</span></h3>
+            <p><span lang="th">สรุปยอดขาย รีวิว หรือข้อความลูกค้าทั้งสัปดาห์เหลือไม่กี่บรรทัด</span><span lang="en">Boil a week of sales, reviews or customer messages down to a few lines.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">จัดหมวดและค้นหา</span><span lang="en">Sort and search</span></h3>
+            <p><span lang="th">แยกประเภทข้อความหรือออเดอร์ และค้นหาเมนูจากคำที่ลูกค้าพูดจริง ๆ</span><span lang="en">Sort messages or orders into groups, and find a menu item from how customers actually describe it.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">แนะนำสิ่งที่น่าจะสนใจ</span><span lang="en">Suggest what to offer</span></h3>
+            <p><span lang="th">แนะนำเมนูหรือของรางวัลที่ลูกค้าคนนั้นน่าจะชอบ จากประวัติที่ผ่านมา</span><span lang="en">Suggest a menu item or reward a customer is likely to like, based on their history.</span></p>
+          </li>
+        </ul>
+        <div class="ai-limits">
+          <h3><span lang="th">สิ่งที่ผมไม่ให้ AI ทำเอง</span><span lang="en">What I don't leave to the AI</span></h3>
+          <p>
+            <span lang="th">เรื่องเงิน การคืนเงิน และการรับปากลูกค้าแทนร้านต้องมีคนตัดสินใจ ผมออกแบบให้ AI ตอบจากข้อมูลที่ร้านกำหนดเท่านั้น ถ้าไม่แน่ใจให้ส่งต่อพนักงาน และส่งข้อมูลลูกค้าให้ AI เท่าที่จำเป็น</span>
+            <span lang="en">Money, refunds and promises to customers need a person. I build the assistant to answer only from what the shop provides, to hand over to staff when it is unsure, and to send the AI only the customer data it needs.</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section">
       <div class="wrap process">
         <div>
           <h2><span lang="th">วิธีทำงาน</span><span lang="en">How I work</span></h2>
@@ -158,10 +202,26 @@
       <div class="wrap skills">
         <h2><span lang="th">สิ่งที่ทำได้</span><span lang="en">What I work with</span></h2>
         <dl>
-          <div><dt><span lang="th">แอปมือถือ</span><span lang="en">Mobile apps</span></dt><dd>Flutter, React Native, Kotlin, Swift</dd></div>
-          <div><dt><span lang="th">ระบบหลังบ้าน</span><span lang="en">Backend</span></dt><dd>Go, REST API, JWT login with refresh tokens</dd></div>
-          <div><dt><span lang="th">ฐานข้อมูล</span><span lang="en">Data</span></dt><dd>PostgreSQL, Redis</dd></div>
-          <div><dt><span lang="th">ขึ้นระบบ</span><span lang="en">Running it</span></dt><dd>Docker, GitHub Actions, AWS</dd></div>
+          <div>
+            <dt><span lang="th">แอปมือถือ</span><span lang="en">Mobile apps</span></dt>
+            <dd class="what"><span lang="th">ทำแอป Android และ iOS ได้ทั้งแบบโค้ดชุดเดียวและแบบแยกแต่ละระบบ</span><span lang="en">Android and iOS apps, from one codebase or built natively.</span></dd>
+            <dd><ul class="chips"><li><img src="assets/icons/flutter.svg" width="20" height="20" alt="">Flutter</li><li><img src="assets/icons/react.svg" width="20" height="20" alt="">React Native</li><li><img src="assets/icons/expo.svg" width="20" height="20" alt="">Expo</li><li><img src="assets/icons/typescript.svg" width="20" height="20" alt="">TypeScript</li><li><img src="assets/icons/kotlin.svg" width="20" height="20" alt="">Kotlin</li><li><img src="assets/icons/swift.svg" width="20" height="20" alt="">Swift</li></ul></dd>
+          </div>
+          <div>
+            <dt><span lang="th">ระบบหลังบ้าน</span><span lang="en">Backend</span></dt>
+            <dd class="what"><span lang="th">API ระบบล็อกอิน และจัดการข้อมูลลูกค้า ออเดอร์ และการจอง</span><span lang="en">APIs, login, and the data behind customers, orders and bookings.</span></dd>
+            <dd><ul class="chips"><li><img src="assets/icons/go.svg" width="20" height="20" alt="">Go</li><li><img src="assets/icons/jwt.svg" width="20" height="20" alt="">JWT</li><li><img src="assets/icons/postgresql.svg" width="20" height="20" alt="">PostgreSQL</li><li><img src="assets/icons/redis.svg" width="20" height="20" alt="">Redis</li></ul></dd>
+          </div>
+          <div>
+            <dt><span lang="th">AI</span><span lang="en">AI</span></dt>
+            <dd class="what"><span lang="th">ให้ AI ตอบลูกค้าและช่วยงานจากข้อมูลของร้านเอง</span><span lang="en">AI that answers customers and helps staff from the shop's own data.</span></dd>
+            <dd><ul class="chips"><li><img src="assets/icons/claude.svg" width="20" height="20" alt="">Claude API</li></ul></dd>
+          </div>
+          <div>
+            <dt><span lang="th">ขึ้นระบบ</span><span lang="en">Running it</span></dt>
+            <dd class="what"><span lang="th">ตั้งเซิร์ฟเวอร์ ทดสอบ และอัปเดตให้อัตโนมัติ</span><span lang="en">Set up the server, test it, and ship updates automatically.</span></dd>
+            <dd><ul class="chips"><li><img src="assets/icons/docker.svg" width="20" height="20" alt="">Docker</li><li><img src="assets/icons/githubactions.svg" width="20" height="20" alt="">GitHub Actions</li><li><img src="assets/icons/aws.svg" width="20" height="20" alt="">AWS</li></ul></dd>
+          </div>
         </dl>
       </div>
     </section>
