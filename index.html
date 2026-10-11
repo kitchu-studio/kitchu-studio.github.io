@@ -7,21 +7,21 @@
   <meta name="description" content="Mobile apps and Go backends for small shops. Booking, ordering and loyalty demos by Kittikun Chunhachotwanit, Bangkok.">
   <meta property="og:title" content="kitchu studio">
   <meta property="og:description" content="แอปมือถือพร้อมระบบหลังบ้านสำหรับร้านขนาดเล็ก · Mobile apps with a backend for small shops">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#0e1114">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="top">
-    <a class="brand" href="#top" aria-label="kitchu studio">kitchu studio</a>
+    <a class="brand" href="#top" aria-label="kitchu studio"><span class="u">kitchu</span><span class="at">@</span>studio<span class="dim">:~$</span></a>
     <nav class="top-nav" aria-label="Main">
-      <a href="#work"><span lang="th">ผลงาน</span><span lang="en">Work</span></a>
-      <a href="#ai">AI</a>
-      <a href="#process"><span lang="th">วิธีทำงาน</span><span lang="en">Process</span></a>
-      <a href="#contact"><span lang="th">ติดต่อ</span><span lang="en">Contact</span></a>
+      <a href="#work"><span lang="th">ผลงาน</span><span lang="en">work</span></a>
+      <a href="#ai">ai</a>
+      <a href="#process"><span lang="th">วิธีทำงาน</span><span lang="en">process</span></a>
+      <a href="#contact"><span lang="th">ติดต่อ</span><span lang="en">contact</span></a>
       <button type="button" class="lang" id="lang" aria-label="Switch language / เปลี่ยนภาษา">
         <span lang="th">EN</span><span lang="en">ไทย</span>
       </button>
@@ -31,38 +31,48 @@
   <main id="top">
     <section class="hero">
       <div class="wrap">
-        <h1>
-          <span lang="th"><span class="nb">แอปมือถือ</span><br><span class="nb">พร้อมระบบหลังบ้าน</span><br><span class="nb">สำหรับร้านขนาดเล็ก</span></span>
-          <span lang="en">Mobile apps<br>with a backend,<br>for small shops</span>
-        </h1>
-        <p class="lead">
-          <span lang="th">จองคิว สั่งอาหาร สะสมแต้ม ผมทำให้ครบทั้งตัวแอปและเซิร์ฟเวอร์ ตัวอย่างงานที่ใช้งานได้จริงอยู่ด้านล่าง</span>
-          <span lang="en">Booking, ordering, loyalty. I build both the app and the server. Working demos are just below.</span>
-        </p>
-        <p class="hero-links">
-          <a href="#work"><span lang="th">ดูผลงาน</span><span lang="en">See the work</span></a>
-          <a href="#contact"><span lang="th">ติดต่อ</span><span lang="en">Get in touch</span></a>
-        </p>
+        <div class="term">
+          <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><span>kitchu@studio: ~</span></div>
+          <div class="term-body">
+            <p class="cmd line" style="--i:0"><span class="ps">$</span> whoami</p>
+            <h1 class="line" style="--i:1">
+              <span lang="th"><span class="nb">แอปมือถือ</span> <span class="nb">พร้อมระบบหลังบ้าน</span> <span class="nb">สำหรับร้านขนาดเล็ก</span></span>
+              <span lang="en">Mobile apps with a backend, for small shops</span>
+            </h1>
+            <p class="cmd line" style="--i:2"><span class="ps">$</span> cat about.txt</p>
+            <p class="out line" style="--i:3">
+              <span lang="th">จองคิว สั่งอาหาร สะสมแต้ม ผมทำให้ครบทั้งตัวแอปและเซิร์ฟเวอร์ ตัวอย่างงานที่ใช้งานได้จริงอยู่ด้านล่าง</span>
+              <span lang="en">Booking, ordering, loyalty. I build both the app and the server. Working demos are just below.</span>
+            </p>
+            <p class="cmd line" style="--i:4"><span class="ps">$</span> ls demos/</p>
+            <p class="out ls line" style="--i:5"><a href="#work">booking/</a> <a href="#work">order/</a> <a href="#work">loyalty/</a></p>
+            <p class="cmd line" style="--i:6"><span class="ps">$</span> <a class="run" href="#contact">./contact.sh</a> <span class="cursor" aria-hidden="true"></span></p>
+          </div>
+        </div>
       </div>
-      <div class="hero-strip" aria-hidden="true">
-        <figure class="phone"><img src="assets/shots/booking-02-services.webp" width="540" height="1350" alt=""></figure>
-        <figure class="phone"><img src="assets/shots/booking-03-booking.webp" width="540" height="1350" alt=""></figure>
-        <figure class="phone"><img src="assets/shots/order-01-menu.webp" width="540" height="1350" alt=""></figure>
-        <figure class="phone"><img src="assets/shots/order-03-receipt.webp" width="540" height="1350" alt=""></figure>
-        <figure class="phone"><img src="assets/shots/loyalty-04-assistant.webp" width="540" height="1212" alt=""></figure>
+      <div class="wrap">
+        <div class="frame">
+          <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><span>demos/preview</span></div>
+          <div class="hero-strip" aria-hidden="true">
+            <figure class="phone"><img src="assets/shots/booking-02-services.webp" width="540" height="1350" alt=""></figure>
+            <figure class="phone"><img src="assets/shots/booking-03-booking.webp" width="540" height="1350" alt=""></figure>
+            <figure class="phone"><img src="assets/shots/order-01-menu.webp" width="540" height="1350" alt=""></figure>
+            <figure class="phone"><img src="assets/shots/order-03-receipt.webp" width="540" height="1350" alt=""></figure>
+            <figure class="phone"><img src="assets/shots/loyalty-04-assistant.webp" width="540" height="1212" alt=""></figure>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="work" class="section">
-      <div class="wrap cols">
-        <div class="col-head">
-          <h2><span lang="th">ตัวอย่างงาน</span><span lang="en">Demo projects</span></h2>
-          <p class="note">
-            <span lang="th">สร้างขึ้นเองเพื่อแสดงฝีมือ ไม่ใช่งานของลูกค้ารายใด แต่ละอันมีแอปและ backend ของตัวเอง ดูโค้ดได้ที่ GitHub</span>
-            <span lang="en">Built to show what I can do, not for a specific client. Each one has its own app and backend, and the code is on GitHub.</span>
-          </p>
-        </div>
-        <div class="col-body">
+      <div class="wrap">
+        <p class="cmd"><span class="ps">$</span> ls -l demos/</p>
+        <h2><span lang="th">ตัวอย่างงาน</span><span lang="en">Demo projects</span></h2>
+        <p class="note">
+          <span lang="th">สร้างขึ้นเองเพื่อแสดงฝีมือ ไม่ใช่งานของลูกค้ารายใด แต่ละอันมีแอปและ backend ของตัวเอง ดูโค้ดได้ที่ GitHub</span>
+          <span lang="en">Built to show what I can do, not for a specific client. Each one has its own app and backend, and the code is on GitHub.</span>
+        </p>
+        <div class="projects">
 <article class="project">
           <div class="project-text">
             <h3><span lang="th">จองคิวร้านตัดผม</span><span lang="en">Salon booking</span></h3>
@@ -129,16 +139,14 @@
     </section>
 
     <section id="ai" class="section">
-      <div class="wrap cols">
-        <div class="col-head">
-          <h2><span lang="th">AI ช่วยงานร้านได้อะไรบ้าง</span><span lang="en">What AI can do for a small shop</span></h2>
-          <p class="note">
-            <span lang="th">ผมใส่ AI เข้าไปในแอปและระบบหลังบ้านเฉพาะจุดที่ช่วยได้จริง นี่คือสิ่งที่ทำได้ในวันนี้</span>
-            <span lang="en">I add AI to the app and backend only where it earns its place. These are things that work today.</span>
-          </p>
-        </div>
-        <div class="col-body">
-          <ul class="ai-list">
+      <div class="wrap">
+        <p class="cmd"><span class="ps">$</span> cat ai.md</p>
+        <h2><span lang="th">AI ช่วยงานร้านได้อะไรบ้าง</span><span lang="en">What AI can do for a small shop</span></h2>
+        <p class="note">
+          <span lang="th">ผมใส่ AI เข้าไปในแอปและระบบหลังบ้านเฉพาะจุดที่ช่วยได้จริง นี่คือสิ่งที่ทำได้ในวันนี้</span>
+          <span lang="en">I add AI to the app and backend only where it earns its place. These are things that work today.</span>
+        </p>
+        <ul class="ai-list">
           <li>
             <h3><span lang="th">ตอบลูกค้าตลอดเวลา</span><span lang="en">Answer customers any time</span></h3>
             <p><span lang="th">ตอบคำถามซ้ำ ๆ เรื่องเวลาเปิด เมนู โปรโมชัน จากข้อมูลที่ร้านตั้งไว้ มีเดโมในตัวอย่างงานด้านบน</span><span lang="en">Handle the repeat questions about opening hours, menu and promotions, from information the shop sets. There is a demo above.</span></p>
@@ -164,7 +172,7 @@
             <p><span lang="th">แนะนำเมนูหรือของรางวัลที่ลูกค้าคนนั้นน่าจะชอบ จากประวัติที่ผ่านมา</span><span lang="en">Suggest a menu item or reward a customer is likely to like, based on their history.</span></p>
           </li>
         </ul>
-          <div class="ai-limits">
+        <div class="ai-limits">
           <h3><span lang="th">สิ่งที่ผมไม่ให้ AI ทำเอง</span><span lang="en">What I don't leave to the AI</span></h3>
           <p>
             <span lang="th">เรื่องเงิน การคืนเงิน และการรับปากลูกค้าแทนร้านต้องมีคนตัดสินใจ ผมออกแบบให้ AI ตอบจากข้อมูลที่ร้านกำหนดเท่านั้น ถ้าไม่แน่ใจให้ส่งต่อพนักงาน และส่งข้อมูลลูกค้าให้ AI เท่าที่จำเป็น</span>
@@ -172,21 +180,18 @@
           </p>
         </div>
 
-        </div>
       </div>
     </section>
 
     <section id="process" class="section">
-      <div class="wrap cols">
-        <div class="col-head">
-          <h2><span lang="th">วิธีทำงาน</span><span lang="en">How I work</span></h2>
-          <p class="note">
-            <span lang="th">ทำคนเดียว คุยกับผมตรง ๆ ไม่ผ่านหลายต่อ</span>
-            <span lang="en">One developer, so you talk to the person writing the code.</span>
-          </p>
-        </div>
-        <div class="col-body">
-          <ol class="steps">
+      <div class="wrap">
+        <p class="cmd"><span class="ps">$</span> ./workflow.sh</p>
+        <h2><span lang="th">วิธีทำงาน</span><span lang="en">How I work</span></h2>
+        <p class="note">
+          <span lang="th">ทำคนเดียว คุยกับผมตรง ๆ ไม่ผ่านหลายต่อ</span>
+          <span lang="en">One developer, so you talk to the person writing the code.</span>
+        </p>
+        <ol class="steps">
           <li>
             <h3><span lang="th">คุยโจทย์</span><span lang="en">Talk it through</span></h3>
             <p><span lang="th">เล่าว่าร้านทำงานอย่างไร และอยากให้แอปช่วยตรงไหน</span><span lang="en">Tell me how the shop runs and where an app would help.</span></p>
@@ -204,17 +209,14 @@
             <p><span lang="th">ส่งโค้ด คู่มือติดตั้ง และขึ้นระบบให้ใช้งานได้</span><span lang="en">Deliver the code, setup notes, and a running system.</span></p>
           </li>
         </ol>
-        </div>
       </div>
     </section>
 
     <section class="section skills">
-      <div class="wrap cols">
-        <div class="col-head">
-          <h2><span lang="th">สิ่งที่ทำได้</span><span lang="en">What I work with</span></h2>
-        </div>
-        <div class="col-body">
-          <dl>
+      <div class="wrap">
+        <p class="cmd"><span class="ps">$</span> cat stack.json</p>
+        <h2><span lang="th">สิ่งที่ทำได้</span><span lang="en">What I work with</span></h2>
+        <dl>
           <div>
             <dt><span lang="th">แอปมือถือ</span><span lang="en">Mobile apps</span></dt>
             <dd class="what"><span lang="th">ทำแอป Android และ iOS ได้ทั้งแบบโค้ดชุดเดียวและแบบแยกแต่ละระบบ</span><span lang="en">Android and iOS apps, from one codebase or built natively.</span></dd>
@@ -251,30 +253,26 @@
             <dd><ul class="chips"><li><img src="assets/icons/docker.svg" width="20" height="20" alt="">Docker</li><li><img src="assets/icons/githubactions.svg" width="20" height="20" alt="">GitHub Actions</li><li><img src="assets/icons/linux.svg" width="20" height="20" alt="">Linux</li><li><img src="assets/icons/nginx.svg" width="20" height="20" alt="">Nginx</li><li><img src="assets/icons/terraform.svg" width="20" height="20" alt="">Terraform</li></ul></dd>
           </div>
         </dl>
-          <p class="more">
+        <p class="more">
           <span lang="th"><strong>และอื่น ๆ ตามโจทย์</strong> ถ้างานต้องใช้เครื่องมือหรือระบบที่ไม่ได้อยู่ในรายการ บอกได้เลย ผมจะประเมินให้ก่อนรับงานว่าทำได้หรือไม่ และบอกตรง ๆ ถ้าไม่เหมาะ</span>
           <span lang="en"><strong>And more, depending on the job.</strong> If your project needs a tool or system that isn't listed, ask. I'll tell you before we start whether I can do it, and say so plainly if it's not a good fit.</span>
           <a href="#contact"><span lang="th">คุยกับผม</span><span lang="en">Talk to me</span></a>
         </p>
-        </div>
       </div>
     </section>
 
     <section id="contact" class="section contact">
-      <div class="wrap cols">
-        <div class="col-head">
-          <h2><span lang="th">มีงานอยากให้ช่วยทำ?</span><span lang="en">Have something to build?</span></h2>
-          <p class="note">
-            <span lang="th">เล่าสั้น ๆ ว่าร้านทำอะไร และอยากได้อะไร ผมตอบกลับเอง</span>
-            <span lang="en">Tell me briefly what the shop does and what you need. I reply myself.</span>
-          </p>
-        </div>
-        <div class="col-body">
-          <div class="contact-links" id="contact-links">
-            <a class="btn btn-solid" href="mailto:devkit002@gmail.com">devkit002@gmail.com</a>
-            <a class="btn btn-line" href="https://www.linkedin.com/in/kittikun-chunhachotwanit-125684236">LinkedIn</a>
-            <a class="btn btn-line" href="https://github.com/kitchu-studio">GitHub</a>
-          </div>
+      <div class="wrap">
+        <p class="cmd"><span class="ps">$</span> ./contact.sh</p>
+        <h2><span lang="th">มีงานอยากให้ช่วยทำ?</span><span lang="en">Have something to build?</span></h2>
+        <p class="note">
+          <span lang="th">เล่าสั้น ๆ ว่าร้านทำอะไร และอยากได้อะไร ผมตอบกลับเอง</span>
+          <span lang="en">Tell me briefly what the shop does and what you need. I reply myself.</span>
+        </p>
+        <div class="contact-links" id="contact-links">
+          <a class="btn btn-solid" href="mailto:devkit002@gmail.com"><span class="k">email</span>devkit002@gmail.com</a>
+          <a class="btn btn-line" href="https://www.linkedin.com/in/kittikun-chunhachotwanit-125684236"><span class="k">linkedin</span>kittikun-chunhachotwanit</a>
+          <a class="btn btn-line" href="https://github.com/kitchu-studio"><span class="k">github</span>kitchu-studio</a>
         </div>
       </div>
     </section>

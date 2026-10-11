@@ -26,7 +26,10 @@ const LINE_ID = '';
     const a = document.createElement('a');
     a.className = 'btn btn-line';
     a.href = 'https://line.me/ti/p/~' + encodeURIComponent(LINE_ID);
-    a.textContent = 'LINE';
+    const k = document.createElement('span');
+    k.className = 'k';
+    k.textContent = 'line';
+    a.append(k, LINE_ID);
     const box = document.getElementById('contact-links');
     box.insertBefore(a, box.children[1]);
   }
