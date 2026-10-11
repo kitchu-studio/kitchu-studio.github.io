@@ -34,3 +34,27 @@ const LINE_ID = '';
     box.insertBefore(a, box.children[1]);
   }
 })();
+
+// Motion: scroll progress bar and reveal-on-scroll. Skipped when the visitor prefers reduced motion.
+(function () {
+  const bar = document.querySelector('.progress');
+  function onScroll() {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    if (bar) bar.style.setProperty('--p', max > 0 ? (h.scrollTop / max).toFixed(4) : 0);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  const targets = document.querySelectorAll('.section h2, .section .note, .section .cmd, .project, .ai-list > li, .steps > li, .skills dl > div, .contact-links, .foot');
+  targets.forEach(function (el) { el.classList.add('rv'); });
+  document.querySelectorAll('.skills .chips').forEach(function (ul) {
+    Array.from(ul.children).forEach(function (li, i) { li.classList.add('rv'); li.style.setProperty('--d', (i * 0.05) + 's'); });
+  });
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+})();
