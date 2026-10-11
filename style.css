@@ -162,3 +162,15 @@ h3 { margin: 0; font-size: 1.3rem; font-weight: 600; line-height: 1.4; }
   .process { grid-template-columns: 1fr 1.3fr; gap: 64px; }
   .skills dl { grid-template-columns: repeat(2, 1fr); column-gap: 48px; }
 }
+
+/* AI section */
+.ai-list { list-style: none; margin: 32px 0 0; padding: 0; display: grid; gap: 0; }
+.ai-list li { padding: 18px 0; border-top: 1px solid #c3d0f3; }
+.ai-list h3 { font-size: 1.15rem; }
+.ai-list p { margin: 4px 0 0; color: var(--subtle); max-width: 34em; }
+.ai-limits { margin-top: 32px; padding: 22px 24px; background: #fff; border-radius: 14px; max-width: 46em; }
+.ai-limits p { margin: 8px 0 0; color: var(--subtle); }
+
+@media (min-width: 760px) {
+  .ai-list { grid-template-columns: repeat(2, 1fr); column-gap: 56px; }
+}
