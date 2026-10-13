@@ -48,11 +48,12 @@ const LINE_ID = '';
 
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
   document.documentElement.classList.add('js');
-  const targets = document.querySelectorAll('.section h2, .section .note, .section .cmd, .project, .ai-list > li, .steps > li, .skills dl > div, .contact-links, .foot');
+  const targets = document.querySelectorAll('.section h2, .section .note, .section .cmd, .project, .ai-list > li, .steps > li, .skills dl > div, .contact-links, .foot, .plan, .chat');
   targets.forEach(function (el) { el.classList.add('rv'); });
   document.querySelectorAll('.skills .chips').forEach(function (ul) {
     Array.from(ul.children).forEach(function (li, i) { li.classList.add('rv'); li.style.setProperty('--d', (i * 0.05) + 's'); });
   });
+  document.querySelectorAll('.chat .msg').forEach(function (m, i) { m.classList.add('rv'); m.style.setProperty('--d', (0.5 + i * 0.55) + 's'); });
   const io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });

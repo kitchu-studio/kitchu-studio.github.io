@@ -4,21 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>kitchu studio</title>
-  <meta name="description" content="Mobile apps and Go backends for small shops. Booking, ordering and loyalty demos by Kittikun Chunhachotwanit, Bangkok.">
+  <meta name="description" content="AI assistant for beauty clinics and small shops: answers customer chats, takes bookings and sends reminders. By Kittikun Chunhachotwanit, Bangkok.">
   <meta property="og:title" content="kitchu studio">
-  <meta property="og:description" content="แอปมือถือพร้อมระบบหลังบ้านสำหรับร้านขนาดเล็ก · Mobile apps with a backend for small shops">
+  <meta property="og:description" content="AI ผู้ช่วยตอบแชทและรับจองคิวสำหรับคลินิกความงาม · AI chat and booking assistant for beauty clinics">
   <meta name="theme-color" content="#0e1114">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <div class="progress" aria-hidden="true"></div>
   <header class="top">
     <a class="brand" href="#top" aria-label="kitchu studio"><span class="u">kitchu</span><span class="at">@</span>studio<span class="dim">:~$</span></a>
     <nav class="top-nav" aria-label="Main">
+      <a href="#clinic"><span lang="th">คลินิก</span><span lang="en">clinic</span></a>
       <a href="#work"><span lang="th">ผลงาน</span><span lang="en">work</span></a>
       <a href="#ai">ai</a>
       <a href="#process"><span lang="th">วิธีทำงาน</span><span lang="en">process</span></a>
@@ -37,16 +38,16 @@
           <div class="term-body">
             <p class="cmd line" style="--i:0"><span class="ps">$</span> whoami</p>
             <h1 class="line" style="--i:1">
-              <span lang="th"><span class="nb">แอปมือถือ</span> <span class="nb">พร้อมระบบหลังบ้าน</span> <span class="nb">สำหรับร้านขนาดเล็ก</span></span>
-              <span lang="en">Mobile apps with a backend, for small shops</span>
+              <span lang="th"><span class="nb">AI ตอบแชทและรับจองคิว</span> <span class="nb">ให้คลินิกความงาม</span> <span class="nb">ตอนคุณหลับ</span></span>
+              <span lang="en">An AI that answers chats and takes bookings for your clinic, while you sleep</span>
             </h1>
             <p class="cmd line" style="--i:2"><span class="ps">$</span> cat about.txt</p>
             <p class="out line" style="--i:3">
-              <span lang="th">จองคิว สั่งอาหาร สะสมแต้ม ผมทำให้ครบทั้งตัวแอปและเซิร์ฟเวอร์ ตัวอย่างงานที่ใช้งานได้จริงอยู่ด้านล่าง</span>
-              <span lang="en">Booking, ordering, loyalty. I build both the app and the server. Working demos are just below.</span>
+              <span lang="th">ลูกค้าทักถามราคา ถามบริการ ขอจองคิวตอนดึก ระบบตอบให้ทันทีจากข้อมูลของคลินิกเอง เรื่องที่ต้องให้หมอตอบจะส่งต่อทีมงาน ผมทำทั้งแอปและระบบหลังบ้านเองคนเดียว</span>
+              <span lang="en">Customers ask about prices and services, or book late at night. The assistant answers at once from your clinic's own information and hands medical questions to your team. I build the app and the backend myself.</span>
             </p>
             <p class="cmd line" style="--i:4"><span class="ps">$</span> ls demos/</p>
-            <p class="out ls line" style="--i:5"><a href="#work">booking/</a> <a href="#work">order/</a> <a href="#work">loyalty/</a></p>
+            <p class="out ls line" style="--i:5"><a href="#clinic">clinic/</a> <a href="#work">booking/</a> <a href="#work">order/</a> <a href="#work">loyalty/</a></p>
             <p class="cmd line" style="--i:6"><span class="ps">$</span> <a class="run" href="#contact">./contact.sh</a> <span class="cursor" aria-hidden="true"></span></p>
           </div>
         </div>
@@ -65,10 +66,62 @@
       </div>
     </section>
 
+    <section id="clinic" class="section">
+      <div class="wrap">
+        <p class="cmd"><span class="ps">$</span> cat clinic-assistant.md</p>
+        <h2><span lang="th">ผู้ช่วย AI สำหรับคลินิกความงามและสปา</span><span lang="en">An AI assistant for beauty clinics and spas</span></h2>
+        <p class="note">
+          <span lang="th">ทำงานใน LINE ที่ลูกค้าใช้อยู่แล้ว ตอบจากรายการบริการ ราคา และเงื่อนไขที่คลินิกกำหนดเท่านั้น ด้านล่างคือตัวอย่างบทสนทนาจากร้านสมมติ</span>
+          <span lang="en">Works inside LINE, where your customers already are. It answers only from the services, prices and rules your clinic sets. Below is a sample chat from a made-up clinic.</span>
+        </p>
+
+        <div class="cols">
+          <div class="chat" role="img" aria-label="Sample chat between a customer and the assistant">
+            <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><span><span lang="th">ตัวอย่างบทสนทนา (ข้อมูลสมมติ)</span><span lang="en">sample chat (made-up data)</span></span></div>
+            <div class="chat-body">
+              <p class="msg me"><span lang="th">เลเซอร์หน้าใสราคาเท่าไหร่คะ</span><span lang="en">How much is the glow laser?</span></p>
+              <p class="msg bot"><span lang="th">เลเซอร์หน้าใส ครั้งละ 2,500 บาท คอร์ส 3 ครั้ง 6,900 บาทค่ะ ใช้เวลาประมาณ 45 นาที ต้องการจองคิวไหมคะ</span><span lang="en">The glow laser is 2,500 baht a session, or 6,900 for a course of 3. About 45 minutes. Would you like to book?</span></p>
+              <p class="msg me"><span lang="th">พรุ่งนี้บ่ายว่างไหม</span><span lang="en">Anything free tomorrow afternoon?</span></p>
+              <p class="msg bot"><span lang="th">พรุ่งนี้ว่าง 13:00, 14:30 และ 16:00 ค่ะ เลือกเวลาได้เลย เดี๋ยวส่งการ์ดยืนยันและเตือนก่อนวันนัดให้ค่ะ</span><span lang="en">Tomorrow is free at 1:00, 2:30 and 4:00 pm. Pick one and I will send a confirmation and a reminder before the visit.</span></p>
+              <p class="msg me"><span lang="th">ทำแล้วหน้าแดงปกติไหมคะ</span><span lang="en">Is redness normal afterwards?</span></p>
+              <p class="msg bot hand"><span lang="th">เรื่องนี้ต้องให้ทีมแพทย์ตอบค่ะ ส่งต่อให้แล้ว จะมีเจ้าหน้าที่ตอบกลับโดยเร็ว</span><span lang="en">That one needs your medical team. I have passed it on and a staff member will reply soon.</span></p>
+            </div>
+          </div>
+
+          <ul class="ai-list one">
+            <li><h3><span lang="th">ตอบคำถามเรื่องบริการและราคา</span><span lang="en">Answers service and price questions</span></h3><p><span lang="th">จากข้อมูลที่คลินิกตั้งไว้ ไม่เดาเอง</span><span lang="en">From the information you set, never guesses.</span></p></li>
+            <li><h3><span lang="th">รับจองและเตือนนัด</span><span lang="en">Books and reminds</span></h3><p><span lang="th">ลูกค้าเลือกเวลาในแชต ระบบเตือนก่อนวันนัด ช่วยลดคนไม่มา</span><span lang="en">Customers pick a time in the chat and a reminder goes out before the visit. Fewer no-shows.</span></p></li>
+            <li><h3><span lang="th">ส่งต่อเรื่องแพทย์ให้คน</span><span lang="en">Hands medical questions to people</span></h3><p><span lang="th">ไม่วินิจฉัยและไม่แนะนำการรักษาเอง คำถามเรื่องอาการจะถึงทีมงานทันที</span><span lang="en">It does not diagnose or advise treatment. Symptom questions go straight to your team.</span></p></li>
+            <li><h3><span lang="th">สะสมแต้มและแจ้งโปรโมชัน</span><span lang="en">Points and promotions</span></h3><p><span lang="th">ต่อยอดจากระบบสะสมแต้มที่ผมทำเป็นเดโมไว้แล้ว</span><span lang="en">Builds on the loyalty system I already demo below.</span></p></li>
+          </ul>
+        </div>
+
+        <h3 class="sub"><span lang="th">ราคาเริ่มต้น</span><span lang="en">Starting prices</span></h3>
+        <div class="plans">
+          <div class="plan">
+            <h4><span lang="th">เริ่มต้น</span><span lang="en">Starter</span></h4>
+            <p class="price">1,500 <small><span lang="th">บาท/เดือน</span><span lang="en">baht / month</span></small></p>
+            <p class="setup"><span lang="th">ค่าติดตั้ง 5,000 บาท</span><span lang="en">5,000 baht setup</span></p>
+            <ul><li><span lang="th">AI ตอบคำถามบริการและราคา</span><span lang="en">AI answers on services and prices</span></li><li><span lang="th">ส่งต่อให้ทีมงาน</span><span lang="en">Hand-over to staff</span></li></ul>
+          </div>
+          <div class="plan hot">
+            <h4><span lang="th">มาตรฐาน</span><span lang="en">Standard</span></h4>
+            <p class="price">2,500 <small><span lang="th">บาท/เดือน</span><span lang="en">baht / month</span></small></p>
+            <p class="setup"><span lang="th">ค่าติดตั้ง 8,000 บาท</span><span lang="en">8,000 baht setup</span></p>
+            <ul><li><span lang="th">ทุกอย่างในเริ่มต้น</span><span lang="en">Everything in Starter</span></li><li><span lang="th">รับจองคิวและเตือนนัด</span><span lang="en">Booking and reminders</span></li><li><span lang="th">สะสมแต้ม</span><span lang="en">Loyalty points</span></li></ul>
+          </div>
+        </div>
+        <p class="note small">
+          <span lang="th">ราคาประมาณการเริ่มต้น ปรับตามงานจริง ค่าข้อความของ LINE Official Account ร้านจ่ายตามแพ็กเกจของ LINE ราคายังไม่รวมภาษีมูลค่าเพิ่ม</span>
+          <span lang="en">Starting estimates, adjusted to the actual job. LINE Official Account message fees are paid by the clinic under LINE's own plans. Prices exclude VAT.</span>
+        </p>
+      </div>
+    </section>
+
     <section id="work" class="section">
       <div class="wrap">
         <p class="cmd"><span class="ps">$</span> ls -l demos/</p>
-        <h2><span lang="th">ตัวอย่างงาน</span><span lang="en">Demo projects</span></h2>
+        <h2><span lang="th">ตัวอย่างงานที่ใช้งานได้จริง</span><span lang="en">Working demo projects</span></h2>
         <p class="note">
           <span lang="th">สร้างขึ้นเองเพื่อแสดงฝีมือ ไม่ใช่งานของลูกค้ารายใด แต่ละอันมีแอปและ backend ของตัวเอง ดูโค้ดได้ที่ GitHub</span>
           <span lang="en">Built to show what I can do, not for a specific client. Each one has its own app and backend, and the code is on GitHub.</span>
@@ -270,7 +323,7 @@
     <section id="contact" class="section contact">
       <div class="wrap">
         <p class="cmd"><span class="ps">$</span> ./contact.sh</p>
-        <h2><span lang="th">มีงานอยากให้ช่วยทำ?</span><span lang="en">Have something to build?</span></h2>
+        <h2><span lang="th">อยากให้ทำระบบแบบนี้ให้ร้านคุณ?</span><span lang="en">Want something like this for your shop?</span></h2>
         <p class="note">
           <span lang="th">เล่าสั้น ๆ ว่าร้านทำอะไร และอยากได้อะไร ผมตอบกลับเอง</span>
           <span lang="en">Tell me briefly what the shop does and what you need. I reply myself.</span>
@@ -291,6 +344,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>
