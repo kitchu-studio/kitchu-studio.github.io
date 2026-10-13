@@ -271,3 +271,6 @@ h3 { margin: 0; color: var(--white); font-size: 1.1rem; font-weight: 600; line-h
 @media (prefers-reduced-motion: no-preference) {
   .cta-row.line { animation: rise .6s cubic-bezier(.2,.8,.2,1) backwards; animation-delay: 3.4s; }
 }
+
+@media (max-width: 520px) { .nb { white-space: normal; } }
+@media (max-width: 520px) { h1 { font-size: 1.7rem; } .term-body { padding-left: 18px; padding-right: 18px; } }
