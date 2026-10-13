@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=9">
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
   <div class="progress" aria-hidden="true"></div>
@@ -47,7 +47,7 @@
               <span lang="en">Customers ask about prices and services, or book late at night. The assistant answers at once from your clinic's own information and hands medical questions to your team. I build the app and the backend myself.</span>
             </p>
             <p class="cmd line" style="--i:4"><span class="ps">$</span> ls demos/</p>
-            <p class="out ls line" style="--i:5"><a href="#clinic">clinic/</a> <a href="#work">booking/</a> <a href="#work">order/</a> <a href="#work">loyalty/</a></p>
+            <p class="out ls line" style="--i:5"><a href="#clinic">clinic/</a> <a href="#work">booking/</a> <a href="#work">order/</a> <a href="#work">loyalty/</a> <a href="#work">calori/</a></p>
             <p class="cmd line" style="--i:6"><span class="ps">$</span> <a class="run" href="#contact">./contact.sh</a> <span class="cursor" aria-hidden="true"></span></p>
             <p class="cta-row line" style="--i:7"><a class="cta" href="#contact"><span lang="th">ขอคุยเรื่องระบบสำหรับร้านคุณ</span><span lang="en">Talk to me about your shop</span></a></p>
           </div>
@@ -121,8 +121,8 @@
         <p class="cmd"><span class="ps">$</span> ls -l demos/</p>
         <h2><span lang="th">ตัวอย่างงานที่ใช้งานได้จริง</span><span lang="en">Working demo projects</span></h2>
         <p class="note">
-          <span lang="th">สร้างขึ้นเองเพื่อแสดงฝีมือ ไม่ใช่งานของลูกค้ารายใด แต่ละอันมีแอปและ backend ของตัวเอง ดูโค้ดได้ที่ GitHub</span>
-          <span lang="en">Built to show what I can do, not for a specific client. Each one has its own app and backend, and the code is on GitHub.</span>
+          <span lang="th">สร้างขึ้นเองเพื่อแสดงฝีมือ ไม่ใช่งานของลูกค้ารายใด ดูโค้ดได้ที่ GitHub</span>
+          <span lang="en">Built to show what I can do, not for a specific client. The code is on GitHub.</span>
         </p>
         <div class="projects">
 <article class="project">
@@ -186,6 +186,26 @@
             <figure class="phone"><img loading="lazy" src="assets/shots/loyalty-05-staff.webp" width="540" height="1212" alt="Staff screen for issuing point codes and checking vouchers"></figure>
           </div>
         </article>
+        <article class="project">
+          <div class="project-text">
+            <h3><span lang="th">แอปนับแคลอรี่และเป้าหมายสุขภาพ</span><span lang="en">Calorie and health goals tracker</span></h3>
+            <p>
+              <span lang="th">บันทึกอาหารและการออกกำลังกาย ดูแคลอรี่เทียบเป้าหมายรายวัน เชื่อมข้อมูลสุขภาพจาก Google Fit และตั้งเป้าหมายพร้อมดูความคืบหน้า หน้าวิเคราะห์ AI เป็นต้นแบบหน้าจอที่ใช้ข้อมูลตัวอย่าง ยังไม่ต่อ AI จริง</span>
+              <span lang="en">Log food and workouts, see calories against a daily goal, pull health data from Google Fit, and track goals. The AI analysis screen is a prototype with sample data and is not connected to a real AI yet.</span>
+            </p>
+            <p class="stack">Flutter · BLoC · Firebase Auth · Google Fit</p>
+            <p class="links">
+              <a href="https://github.com/kit-chu/CaloriWise"><span lang="th">โค้ดแอป</span><span lang="en">App code</span></a>
+            </p>
+          </div>
+          <div class="shots" tabindex="0" role="group" aria-label="Calorie tracker screenshots">
+            <figure class="phone"><img loading="lazy" src="assets/shots/calori-01-home.webp" width="540" height="1200" alt="Home screen with daily calorie ring and recent meals"></figure>
+            <figure class="phone"><img loading="lazy" src="assets/shots/calori-02-workout.webp" width="540" height="1200" alt="Workout screen with calorie goal, steps and activities"></figure>
+            <figure class="phone"><img loading="lazy" src="assets/shots/calori-03-analysis.webp" width="540" height="1200" alt="Analysis screen with sample data"></figure>
+            <figure class="phone"><img loading="lazy" src="assets/shots/calori-04-goals.webp" width="540" height="1200" alt="Goals and rewards screen with progress bars"></figure>
+          </div>
+        </article>
+
         </div>
       </div>
     </section>
@@ -366,6 +386,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=10"></script>
 </body>
 </html>
