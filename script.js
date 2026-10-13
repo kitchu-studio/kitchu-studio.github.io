@@ -46,6 +46,22 @@ const LINE_ID = '';
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  const tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      tabs.forEach(function (x) { const on = x === t; x.classList.toggle('on', on); x.setAttribute('aria-selected', on); });
+      document.querySelectorAll('.chat-body').forEach(function (b) {
+        const show = b.getAttribute('data-p') === t.getAttribute('data-p');
+        b.hidden = !show;
+        if (show) {
+          b.querySelectorAll('.msg').forEach(function (m, i) {
+            m.classList.remove('in'); m.style.setProperty('--d', (i * 0.45) + 's');
+            void m.offsetWidth; m.classList.add('in');
+          });
+        }
+      });
+    });
+  });
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
   document.documentElement.classList.add('js');
   const targets = document.querySelectorAll('.section h2, .section .note, .section .cmd, .project, .ai-list > li, .steps > li, .skills dl > div, .contact-links, .foot, .plan, .chat');

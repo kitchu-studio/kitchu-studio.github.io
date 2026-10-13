@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=7">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
   <div class="progress" aria-hidden="true"></div>
@@ -49,6 +49,7 @@
             <p class="cmd line" style="--i:4"><span class="ps">$</span> ls demos/</p>
             <p class="out ls line" style="--i:5"><a href="#clinic">clinic/</a> <a href="#work">booking/</a> <a href="#work">order/</a> <a href="#work">loyalty/</a></p>
             <p class="cmd line" style="--i:6"><span class="ps">$</span> <a class="run" href="#contact">./contact.sh</a> <span class="cursor" aria-hidden="true"></span></p>
+            <p class="cta-row line" style="--i:7"><a class="cta" href="#contact"><span lang="th">ขอคุยเรื่องระบบสำหรับร้านคุณ</span><span lang="en">Talk to me about your shop</span></a></p>
           </div>
         </div>
       </div>
@@ -76,15 +77,32 @@
         </p>
 
         <div class="cols">
-          <div class="chat" role="img" aria-label="Sample chat between a customer and the assistant">
+          <div class="chat" aria-label="Sample chats between a customer and the assistant">
             <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><span><span lang="th">ตัวอย่างบทสนทนา (ข้อมูลสมมติ)</span><span lang="en">sample chat (made-up data)</span></span></div>
-            <div class="chat-body">
+            <div class="tabs" role="tablist">
+              <button type="button" role="tab" class="tab on" data-p="clinic" aria-selected="true"><span lang="th">คลินิก</span><span lang="en">Clinic</span></button>
+              <button type="button" role="tab" class="tab" data-p="fashion" aria-selected="false"><span lang="th">ร้านเสื้อผ้า</span><span lang="en">Clothing</span></button>
+              <button type="button" role="tab" class="tab" data-p="cafe" aria-selected="false"><span lang="th">คาเฟ่</span><span lang="en">Café</span></button>
+            </div>
+            <div class="chat-body" data-p="clinic">
               <p class="msg me"><span lang="th">เลเซอร์หน้าใสราคาเท่าไหร่คะ</span><span lang="en">How much is the glow laser?</span></p>
               <p class="msg bot"><span lang="th">เลเซอร์หน้าใส ครั้งละ 2,500 บาท คอร์ส 3 ครั้ง 6,900 บาทค่ะ ใช้เวลาประมาณ 45 นาที ต้องการจองคิวไหมคะ</span><span lang="en">The glow laser is 2,500 baht a session, or 6,900 for a course of 3. About 45 minutes. Would you like to book?</span></p>
               <p class="msg me"><span lang="th">พรุ่งนี้บ่ายว่างไหม</span><span lang="en">Anything free tomorrow afternoon?</span></p>
               <p class="msg bot"><span lang="th">พรุ่งนี้ว่าง 13:00, 14:30 และ 16:00 ค่ะ เลือกเวลาได้เลย เดี๋ยวส่งการ์ดยืนยันและเตือนก่อนวันนัดให้ค่ะ</span><span lang="en">Tomorrow is free at 1:00, 2:30 and 4:00 pm. Pick one and I will send a confirmation and a reminder before the visit.</span></p>
               <p class="msg me"><span lang="th">ทำแล้วหน้าแดงปกติไหมคะ</span><span lang="en">Is redness normal afterwards?</span></p>
               <p class="msg bot hand"><span lang="th">เรื่องนี้ต้องให้ทีมแพทย์ตอบค่ะ ส่งต่อให้แล้ว จะมีเจ้าหน้าที่ตอบกลับโดยเร็ว</span><span lang="en">That one needs your medical team. I have passed it on and a staff member will reply soon.</span></p>
+            </div>
+            <div class="chat-body" hidden data-p="fashion">
+              <p class="msg me"><span lang="th">เสื้อเชิ้ตลินินตัวนี้ มีไซซ์ M สีขาวไหมคะ</span><span lang="en">Does the linen shirt come in white, size M?</span></p>
+              <p class="msg bot"><span lang="th">มีค่ะ ไซซ์ M สีขาวเหลือ 3 ตัว ราคา 890 บาท อก 40 นิ้ว ยาว 27 นิ้วค่ะ</span><span lang="en">Yes. White in M has 3 left, 890 baht. Chest 40 in, length 27 in.</span></p>
+              <p class="msg me"><span lang="th">ขอ 2 ตัว ส่งกรุงเทพ</span><span lang="en">Two please, delivered to Bangkok.</span></p>
+              <p class="msg bot"><span lang="th">รวม 1,780 บาท ค่าส่ง 40 บาท รวม 1,820 บาทค่ะ ส่ง QR PromptPay ให้แล้ว โอนแล้วส่งสลิปมาได้เลยค่ะ</span><span lang="en">1,780 baht plus 40 delivery, 1,820 in total. I have sent a PromptPay QR. Send the slip once you have paid.</span></p>
+            </div>
+            <div class="chat-body" hidden data-p="cafe">
+              <p class="msg me"><span lang="th">พรุ่งนี้สั่งล่วงหน้าได้ไหม</span><span lang="en">Can I pre-order for tomorrow?</span></p>
+              <p class="msg bot"><span lang="th">ได้ค่ะ สั่งล่วงหน้าได้ถึง 18:00 วันนี้ รับที่ร้านช่วง 08:00-10:00 ค่ะ</span><span lang="en">Yes, until 6 pm today. Pickup is between 8 and 10 am.</span></p>
+              <p class="msg me"><span lang="th">ลาเต้เย็น 2 แก้ว ไม่หวาน รับ 8:30</span><span lang="en">Two iced lattes, no sugar, pickup at 8:30.</span></p>
+              <p class="msg bot"><span lang="th">ลาเต้เย็นไม่หวาน 2 แก้ว 150 บาท รับ 08:30 ค่ะ ส่ง QR ให้แล้ว ชำระเสร็จจะแจ้งร้านให้ทันทีค่ะ</span><span lang="en">Two iced lattes, no sugar, 150 baht, pickup 8:30. A QR has been sent, and the shop is told as soon as you pay.</span></p>
             </div>
           </div>
 
@@ -324,6 +342,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=7"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
