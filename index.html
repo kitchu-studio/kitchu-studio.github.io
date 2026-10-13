@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=8">
+  <link rel="stylesheet" href="style.css?v=9">
 </head>
 <body>
   <div class="progress" aria-hidden="true"></div>
@@ -223,15 +223,39 @@
             <h3><span lang="th">แนะนำสิ่งที่น่าจะสนใจ</span><span lang="en">Suggest what to offer</span></h3>
             <p><span lang="th">แนะนำเมนูหรือของรางวัลที่ลูกค้าคนนั้นน่าจะชอบ จากประวัติที่ผ่านมา</span><span lang="en">Suggest a menu item or reward a customer is likely to like, based on their history.</span></p>
           </li>
+                  <li>
+            <h3><span lang="th">รับออเดอร์จากแชตจนจบ</span><span lang="en">Take orders from the chat</span></h3>
+            <p><span lang="th">ลูกค้าพิมพ์สิ่งที่อยากได้ ระบบสรุปออเดอร์ ขอที่อยู่ ส่ง QR PromptPay และแจ้งร้านให้ทันที</span><span lang="en">The customer types what they want. The system sums up the order, asks for an address, sends a PromptPay QR and tells the shop.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">ตรวจสลิปโอนเงิน</span><span lang="en">Check payment slips</span></h3>
+            <p><span lang="th">อ่านยอดและวันที่จากรูปสลิป เทียบกับออเดอร์ แล้วให้ร้านกดยืนยัน</span><span lang="en">Read the amount and date from a slip photo, match it to the order and let the shop confirm.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">ตอบลูกค้าต่างชาติ</span><span lang="en">Reply to foreign customers</span></h3>
+            <p><span lang="th">ตอบเป็นภาษาอังกฤษ จีน หรือญี่ปุ่น จากข้อมูลชุดเดียวกัน เหมาะกับสปา โรงแรม และร้านในย่านท่องเที่ยว</span><span lang="en">Answer in English, Chinese or Japanese from the same information. Good for spas, hotels and shops in tourist areas.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">ตามลูกค้าที่ยังไม่ตัดสินใจ</span><span lang="en">Follow up undecided customers</span></h3>
+            <p><span lang="th">ส่งข้อความตามคนที่ถามราคาแล้วเงียบ หรือเตือนให้กลับมาทำซ้ำเมื่อถึงเวลา</span><span lang="en">Nudge people who asked for a price and went quiet, or remind regulars when they are due again.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">สรุปประจำวันถึงเจ้าของร้าน</span><span lang="en">Daily summary for the owner</span></h3>
+            <p><span lang="th">ทุกเช้าส่งสรุปว่ามีใครถามอะไร นัดกี่คน ออเดอร์เท่าไหร่ และเรื่องไหนที่ต้องตามต่อ</span><span lang="en">Each morning: who asked what, how many bookings, how many orders, and what needs a follow-up.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">ตอบรีวิวและเขียนโพสต์</span><span lang="en">Reply to reviews and write posts</span></h3>
+            <p><span lang="th">ร่างคำตอบรีวิว Google และแคปชันโพสต์ในโทนของร้าน เจ้าของอ่านและแก้ก่อนโพสต์</span><span lang="en">Draft replies to Google reviews and post captions in the shop's tone. The owner reads and edits before posting.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">เตือนสต็อกใกล้หมด</span><span lang="en">Low-stock alerts</span></h3>
+            <p><span lang="th">เมื่อสินค้าใกล้หมด แจ้งเจ้าของ และให้บอทบอกลูกค้าว่าเหลือกี่ชิ้น</span><span lang="en">Warn the owner when an item runs low, and let the assistant tell customers how many are left.</span></p>
+          </li>
+          <li>
+            <h3><span lang="th">ทำใบเสนอราคาให้ลูกค้า</span><span lang="en">Draft quotes</span></h3>
+            <p><span lang="th">จากข้อมูลที่ลูกค้าให้ ร่างใบเสนอราคาเป็น PDF ให้เจ้าของตรวจก่อนส่ง</span><span lang="en">From what the customer provides, draft a PDF quote for the owner to check before sending.</span></p>
+          </li>
         </ul>
-        <div class="ai-limits">
-          <h3><span lang="th">สิ่งที่ผมไม่ให้ AI ทำเอง</span><span lang="en">What I don't leave to the AI</span></h3>
-          <p>
-            <span lang="th">เรื่องเงิน การคืนเงิน และการรับปากลูกค้าแทนร้านต้องมีคนตัดสินใจ ผมออกแบบให้ AI ตอบจากข้อมูลที่ร้านกำหนดเท่านั้น ถ้าไม่แน่ใจให้ส่งต่อพนักงาน และส่งข้อมูลลูกค้าให้ AI เท่าที่จำเป็น</span>
-            <span lang="en">Money, refunds and promises to customers need a person. I build the assistant to answer only from what the shop provides, to hand over to staff when it is unsure, and to send the AI only the customer data it needs.</span>
-          </p>
-        </div>
-
       </div>
     </section>
 
@@ -342,6 +366,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>
